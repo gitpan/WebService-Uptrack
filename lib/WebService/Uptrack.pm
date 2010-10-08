@@ -15,7 +15,7 @@ require HTTP::Response;
 require JSON::XS;
 require LWP::UserAgent;
 
-use version; our $VERSION = qv('0.0.1');
+use version; our $VERSION = qv('0.0.2');
 
 # DEFAULT VALUES
 Readonly our $API_URL   => 'https://uptrack.ksplice.com/api';
@@ -33,7 +33,6 @@ has 'debug' => (
 has 'url' => (
     is          => 'ro',
     isa         => 'Str',
-    coerce      => 1,
     default     => $API_URL,
     required    => 1,
     trigger     => \&_url_trim,
@@ -218,7 +217,7 @@ WebService::Uptrack - access KSplice Uptrack web API
 
 =head1 VERSION
 
-This document describes WebService::Uptrack version 0.0.1
+This document describes WebService::Uptrack version 0.0.2
 
 =head1 SYNOPSIS
 

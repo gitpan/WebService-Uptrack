@@ -5,5 +5,3 @@ Future improvements:
 * better documentation!
 
 * parameter validation (for url, username, api key etc.)
-
-* fix Build.PL to correctly generate bugtracker entry in META.yml

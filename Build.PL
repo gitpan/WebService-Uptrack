@@ -5,8 +5,6 @@ use Module::Build;
 my $builder = Module::Build->new(
     module_name         => 'WebService::Uptrack',
     license             => 'perl',
-    repository          => 'https://code.launchpad.net/~shuff/webservice-uptrack/trunk',
-    bugtracker          => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=WebService-Uptrack',
     dist_author         => 'Steve Huff <shuff@cpan.org>',
     dist_version_from   => 'lib/WebService/Uptrack.pm',
     build_requires => {
@@ -26,6 +24,12 @@ my $builder = Module::Build->new(
         'version'           => 0,
     },
     add_to_cleanup      => [ 'WebService-Uptrack-*' ],
+    meta_merge => {
+        resources => {
+            repository          => 'https://code.launchpad.net/~shuff/webservice-uptrack/trunk',
+        },
+    },
+    create_makefile_pl      => 'traditional',
 );
 
 $builder->create_build_script();

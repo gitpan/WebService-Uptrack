@@ -1,10 +1,10 @@
 Build.PL
 Changes
 lib/WebService/Uptrack.pm
+Makefile.PL
 MANIFEST
 META.yml
 README
-SIGNATURE
 t/00.load.t
 t/01.init.t
 t/02.ua.t
@@ -14,3 +14,4 @@ t/perlcritic.t
 t/pod-coverage.t
 t/pod.t
 TODO
+SIGNATURE    Added here by Module::Build
